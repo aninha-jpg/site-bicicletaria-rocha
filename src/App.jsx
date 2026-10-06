@@ -1,7 +1,15 @@
-import Hero from "./components/Home/hero";
+import Hero from "./components/home/hero";
+import Navbar from "./components/navbar/navbar";
+
 
 function App() {
-  return <Hero />;
+  return (
+    <>
+      <Navbar />
+      <Hero />
+    </>
+  );
 }
+
 
 export default App;

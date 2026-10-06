@@ -1,0 +1,22 @@
+/*
+
+paleta
+#030BA6 -- principal
+#020873 --secund.
+#020659 -- elementos fortes
+#010440 -- fundo
+#8C8B79 -- detalhes
+black and white
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
