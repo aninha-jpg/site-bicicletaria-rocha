@@ -1,0 +1,143 @@
+.aboutContainer h2 {
+    color: white;
+    font-size: 26px;
+    text-align: center;
+}
+
+.aboutCard {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: auto;
+    padding: 20px 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aboutCard {
+    background-image:
+        linear-gradient(
+            rgba(1, 4, 64, 0.58),
+            rgba(1, 4, 64, 0.58)
+        ),
+        url("../../assets/fachada-lado.jpg");
+
+
+    background-size: cover;
+    background-position: 50% center;
+    background-repeat: no-repeat;
+    background-color: var(--background);
+
+    border-radius: 20px;
+    color: white;
+}
+
+.aboutCard p {
+    padding: 15px;
+    align-items: center;
+}
+.aboutQuote {
+    display: block;
+    height: 45px;
+    color: var(--strong-elements);
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 2;
+    margin-left: 10px;
+}
+
+.aboutQuoteBottom {
+    display: block;
+    font-size: 100px;
+    color: var(--strong-elements);
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 2;
+    text-align: right;
+    padding: 5px;
+    margin-top: -30px;
+    margin-right: 10px
+}
+
+
+@media (min-width: 768px) {
+    .aboutContainer {
+        width: 100%;
+        padding: 0 24px;
+        display: flex;
+        gap: 20px;
+        align-items: stretch;
+        box-sizing: border-box;
+    }
+
+    .aboutCard {
+        width: 100%;
+        box-sizing: border-box;
+        flex-direction: row;
+        align-items: center;
+        gap: 32px;
+        background-image: none;
+        background-color: var(--blue-about);
+        color: var(--background);
+        padding: 32px;
+        position: sticky;
+        top: 20px;
+        align-self: flex-start;
+        height: auto;
+        min-height: 650px;
+    }
+
+    .aboutText {
+        flex: 1.2;
+        font-size: 20px;
+        min-width: 0;
+    }
+
+    .aboutText p {
+        padding: 0 12px;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    .aboutText h2 {
+        margin-top: 0;
+        align-self: flex-start;
+        text-align: left;
+    }
+
+    .aboutQuote {
+        display: block;
+        height: 45px;
+        color: var(--main-blue);
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 2;
+        margin-left: 10px;
+    }
+
+    .aboutImage {
+        flex: 1;
+        height: 800px;
+        min-height: 550px;
+        min-width: 0;
+        align-self: flex-start;
+        border-radius: 15px;
+        background-image: url("../../assets/fachada-lado.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid var(--main-blue);
+    }
+
+    .aboutContainer h2 {
+        color: var(--main-blue);
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .aboutQuote,
+    .aboutQuoteBottom {
+        color: var(--main-blue);
+    }
+}
