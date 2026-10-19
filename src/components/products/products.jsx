@@ -19,11 +19,6 @@ function Products(){
                     <h2>Acessórios</h2>
                     <p>Itens para acompanhar você em seus pedais.</p>
                 </div>
-
-                <div className="product-card">
-                    <h2>Atendimento</h2>
-                    <p>Entre em contato para consultar nossos produtos e serviços.</p>
-                </div>
             </div>
 
         </section>

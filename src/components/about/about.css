@@ -36,29 +36,10 @@
     padding: 15px;
     align-items: center;
 }
-.aboutQuote {
-    display: block;
-    height: 45px;
-    color: var(--strong-elements);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 2;
-    margin-left: 10px;
-}
 
-.aboutQuoteBottom {
-    display: block;
-    font-size: 100px;
-    color: var(--strong-elements);
-    font-size: 50px;
-    font-weight: 400;
-    line-height: 2;
-    text-align: right;
-    padding: 5px;
-    margin-top: -30px;
-    margin-right: 10px
+.aboutText h2 {
+    color: var(--main-blue);
 }
-
 
 @media (min-width: 768px) {
     .aboutContainer {
@@ -102,17 +83,9 @@
     .aboutText h2 {
         margin-top: 0;
         align-self: flex-start;
-        text-align: left;
-    }
-
-    .aboutQuote {
-        display: block;
-        height: 45px;
-        color: var(--main-blue);
-        font-size: 50px;
-        font-weight: 400;
-        line-height: 2;
-        margin-left: 10px;
+        text-align: center;
+        width: 100%;
+        transform: translateY(-20px);
     }
 
     .aboutImage {
@@ -136,7 +109,6 @@
         text-align: center;
     }
 
-    .aboutQuote,
     .aboutQuoteBottom {
         color: var(--main-blue);
     }
