@@ -36,7 +36,7 @@
 
 .mobileLinks a:hover {
   color: white;
-  background-color: var(--second-blue);
+  background-color: var(--main-blue);
   border-radius: 10px;
   transition: 0.5s;
 }
@@ -72,13 +72,17 @@
   }
 
   .navLinks a {
-    color: var(--background);
+    color: var(--main-blue);
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
   }
 
   .navLinks a:hover {
-    color: #8C8B79;
+    color: var(--strong-elements);
   }
+
+  .navLinks a.whatsappButton {
+    color: white;
+}
 }

@@ -1,3 +1,5 @@
+import { WhatsAppOutlined } from "@ant-design/icons";
+import "./whatsAppButton.css";
 
 function WhatsAppButton() {
     return (
@@ -8,6 +10,7 @@ function WhatsAppButton() {
             rel="noopener noreferrer"
             aria-label="Entre em contato pelo WhatsApp"
         >
+            <WhatsAppOutlined />
             WhatsApp
         </a>
     );

@@ -3,6 +3,7 @@ import { Button, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 
 import Logo from "../../assets/logo.jpg";
+import WhatsAppButton from "../whatsAppButton/whatsAppButton";
 import "./navbar.css";
 import "../styles/styles.css";
 
@@ -23,6 +24,8 @@ function Navbar() {
           <a href="#products">Produtos</a>
           <a href="#about">Sobre</a>
           <a href="#contact">Contato</a>
+          
+          <WhatsAppButton />
         </div>
       </div>
 

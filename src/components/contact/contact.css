@@ -9,12 +9,12 @@
     margin: 0;
     padding: 10px;
     color: var(--main-blue);
-    font-size: 26px;
+    font-size: 36px;
 }
 
 .contactHeader p {
     padding: 5px;
-    font-size: 12px;
+    font-size: 20px;
     line-height: 1.5;
 }
 
