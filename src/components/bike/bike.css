@@ -1,0 +1,90 @@
+
+.bikesSection {
+  padding: 5px 10px;
+}
+
+.bikesSection > h2 {
+  margin: 0 0 20px;
+  text-align: center;
+  color: var(--main-blue);
+  font-size: 28px;
+}
+
+.bikesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.bikeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.bikeCard img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+}
+
+.bikeCard h3 {
+  margin: 0;
+  color: var(--main-blue);
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Botão das bicicletas - celular */
+.bikeCard .whatsappButton {
+  width: 100%;
+  justify-content: center;
+  padding: 8px 10px;
+  font-size: 12px;
+  gap: 5px;
+}
+
+.bikeCard .whatsappButton .anticon {
+  font-size: 14px;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .bikesSection > h2 {
+    font-size: 36px;
+  }
+
+  .bikesGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .bikeCard {
+    padding: 20px;
+  }
+
+  .bikeCard img {
+    height: 200px;
+  }
+
+  .bikeCard h3 {
+    font-size: 20px;
+  }
+
+  .bikeCard .whatsappButton {
+    padding: 12px 16px;
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .bikeCard .whatsappButton .anticon {
+    font-size: 18px;
+  }
+}

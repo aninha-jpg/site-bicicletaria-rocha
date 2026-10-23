@@ -25,7 +25,7 @@ function Navbar() {
           <a href="#about">Sobre</a>
           <a href="#contact">Contato</a>
           
-          <WhatsAppButton />
+          <WhatsAppButton texto="  WhatsApp"/>
         </div>
       </div>
 

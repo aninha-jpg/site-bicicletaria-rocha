@@ -1,7 +1,7 @@
 import { WhatsAppOutlined } from "@ant-design/icons";
 import "./whatsAppButton.css";
 
-function WhatsAppButton() {
+function WhatsAppButton({texto}) {
     return (
         <a
             className="whatsappButton"
@@ -11,7 +11,7 @@ function WhatsAppButton() {
             aria-label="Entre em contato pelo WhatsApp"
         >
             <WhatsAppOutlined />
-            WhatsApp
+            {texto}
         </a>
     );
 }

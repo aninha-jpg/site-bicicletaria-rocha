@@ -5,7 +5,8 @@ import About from "./components/about/about";
 import Contact from "./components/contact/contact";
 import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
-
+import Parts from "./components/parts/parts";
+import Bike from "./components/bike/bike";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
       <Header />
       <Home />
       <Products />
+      <Bike />
+      <Parts />
       <About />
       <Contact />
       <Footer />

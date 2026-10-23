@@ -1,4 +1,3 @@
-@media (min-width: 768px) {
 .whatsappButton {
     display: inline-flex;
     align-items: center;
@@ -25,6 +24,4 @@
 
 .whatsappButton:hover {
     transform: scale(1.05);
-}
-
 }

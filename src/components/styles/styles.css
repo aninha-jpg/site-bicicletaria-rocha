@@ -9,6 +9,10 @@
   --blue-about: #e1e5f0;
 }
 
+body {
+  background-color: var(--blue-about);
+}
+
 * {
     font-family: 'Poppins', sans-serif;
 }

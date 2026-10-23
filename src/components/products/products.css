@@ -1,3 +1,7 @@
+body {
+  background-color: var(--blue-about);
+}
+
 .products-section {
     padding: 20px 16px;
     margin-bottom: 60px;
@@ -47,6 +51,11 @@
 .product-card .anticon {
     font-size: 25px;
     color: var(--main-blue);
+}
+
+.serviceLink {
+    text-decoration: none;
+    color: inherit;
 }
 
 @media (min-width: 768px) {
