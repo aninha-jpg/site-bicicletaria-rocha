@@ -1,90 +1,170 @@
 
 .bikesSection {
-  padding: 5px 10px;
+    width: 100%;
+    padding: 52px 20px 64px;
+    background-color: var(--blue-about, #e1e5f0);
+    box-sizing: border-box;
 }
 
 .bikesSection > h2 {
-  margin: 0 0 20px;
-  text-align: center;
-  color: var(--main-blue);
-  font-size: 28px;
+    margin: 0 0 12px;
+    color: var(--second-blue, #020873);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
 }
 
+.bikesSection > p {
+    max-width: 600px;
+    margin: 0 auto 32px;
+    color: #555d73;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: center;
+}
 .bikesGrid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-  max-width: 1100px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .bikeCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  padding: 12px;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    padding: 12px 10px 14px;
+
+    background-color: #fff;
+    border: 1px solid rgba(2, 8, 115, 0.08);
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(2, 8, 115, 0.06);
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
 }
 
-.bikeCard img {
-  width: 100%;
-  height: 130px;
-  object-fit: contain;
+.bikeCard .bikeImageClickable {
+    display: block;
+    width: 100%;
+    height: 140px;
+
+    object-fit: contain;
+    cursor: zoom-in;
+
+    transition: transform 0.25s ease;
+}
+
+.bikeCard .bikeImageClickable:hover {
+    transform: scale(1.04);
+}
+
+.bikeCard .bikeImageClickable:focus-visible {
+    outline: 2px solid var(--main-blue, #030BA6);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 .bikeCard h3 {
-  margin: 0;
-  color: var(--main-blue);
-  text-align: center;
-  font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 42px;
+    margin: 10px 0 0;
+
+    color: #20243a;
+    font-size: 0.88rem;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    overflow-wrap: anywhere;
 }
 
-/* Botão das bicicletas - celular */
-.bikeCard .whatsappButton {
-  width: 100%;
-  justify-content: center;
-  padding: 8px 10px;
-  font-size: 12px;
-  gap: 5px;
+
+@media (min-width: 600px) {
+    .bikesSection {
+        padding: 60px 5% 72px;
+    }
+
+    .bikesSection > h2 {
+        font-size: 2rem;
+    }
+
+    .bikesSection > p {
+        margin-bottom: 38px;
+    }
+
+    .bikesGrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .bikeCard {
+        padding: 16px 14px;
+        border-radius: 16px;
+    }
+
+    .bikeCard .bikeImageClickable {
+        height: 170px;
+    }
+
+    .bikeCard h3 {
+        font-size: 0.95rem;
+    }
 }
 
-.bikeCard .whatsappButton .anticon {
-  font-size: 14px;
+@media (min-width: 900px) {
+    .bikesSection {
+        padding: 68px 5% 84px;
+    }
+
+    .bikesSection > h2 {
+        font-size: 2.1rem;
+    }
+
+    .bikesGrid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    .bikeCard {
+        padding: 18px 16px 20px;
+        border-radius: 16px;
+    }
+
+    .bikeCard .bikeImageClickable {
+        height: 195px;
+    }
+
+    .bikeCard h3 {
+        font-size: 0.98rem;
+    }
+
+    .bikeCard:hover {
+        transform: translateY(-3px);
+        border-color: rgba(3, 11, 166, 0.2);
+        box-shadow: 0 8px 22px rgba(2, 8, 115, 0.1);
+    }
 }
 
-/* Desktop */
-@media (min-width: 768px) {
-  .bikesSection > h2 {
-    font-size: 36px;
-  }
+@media (prefers-reduced-motion: reduce) {
+    .bikeCard,
+    .bikeCard .bikeImageClickable {
+        transition: none;
+    }
 
-  .bikesGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-  }
-
-  .bikeCard {
-    padding: 20px;
-  }
-
-  .bikeCard img {
-    height: 200px;
-  }
-
-  .bikeCard h3 {
-    font-size: 20px;
-  }
-
-  .bikeCard .whatsappButton {
-    padding: 12px 16px;
-    font-size: 16px;
-    gap: 8px;
-  }
-
-  .bikeCard .whatsappButton .anticon {
-    font-size: 18px;
-  }
+    .bikeCard:hover,
+    .bikeCard .bikeImageClickable:hover {
+        transform: none;
+    }
 }

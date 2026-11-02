@@ -12,8 +12,7 @@ function Contact() {
                 <h2>Entre em contato</h2>
 
                 <p>
-                    Precisa de uma peça ou quer saber mais
-                    sobre nossos serviços? Fale com a gente!
+                    Quer saber mais sobre nossos serviços? Fale com a gente!
                 </p>
             </div>
 

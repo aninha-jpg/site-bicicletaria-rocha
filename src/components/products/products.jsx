@@ -2,9 +2,8 @@ import { SettingOutlined, ToolOutlined, TagsOutlined } from '@ant-design/icons';
 import './products.css';
 
 function Products(){
-    {/* products section */}
     return (
-        <section className="products-section">
+        <section className="products-section" >
             <h2>O que oferecemos?</h2>
             <div className="products-container">
                 <a href="#manutencao" className="serviceLink">
@@ -21,7 +20,7 @@ function Products(){
                         <p>Peças e componentes para sua bicicleta.</p>
                     </div>
                 </a>
-                <a href="#product-accessories" className="serviceLink">
+                <a href="#accessories" className="serviceLink">
                     <div className="product-card">
                         <TagsOutlined />
                         <h2>Acessórios</h2>

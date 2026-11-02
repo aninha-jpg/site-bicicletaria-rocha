@@ -1,0 +1,128 @@
+.maintenanceSection {
+  padding: 40px 10px;
+}
+
+.maintenanceSection > h2 {
+  margin: 0 0 12px;
+  text-align: center;
+  color: var(--main-blue);
+  font-size: 28px;
+}
+
+.maintenanceDescription {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-color, #555);
+}
+
+.maintenanceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.maintenanceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 12px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.maintenanceIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #e8ecff;
+  color: var(--main-blue);
+  font-size: 24px;
+}
+
+.maintenanceCard h3 {
+  margin: 0;
+  color: var(--main-blue);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.maintenanceCard > p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-color, #555);
+}
+
+/* Botão no celular */
+.maintenanceCard .whatsappButton {
+  width: 100%;
+  justify-content: center;
+  padding: 8px 10px;
+  font-size: 12px;
+  gap: 5px;
+}
+
+.maintenanceCard .whatsappButton .anticon {
+  font-size: 14px;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .maintenanceSection {
+    padding: 60px 24px;
+  }
+
+  .maintenanceSection > h2 {
+    font-size: 36px;
+  }
+
+  .maintenanceDescription {
+    margin-bottom: 35px;
+    font-size: 16px;
+  }
+
+  .maintenanceGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .maintenanceCard {
+    padding: 24px 18px;
+    gap: 18px;
+  }
+
+  .maintenanceIcon {
+    width: 58px;
+    height: 58px;
+    font-size: 28px;
+  }
+
+  .maintenanceCard h3 {
+    font-size: 18px;
+  }
+
+  .maintenanceCard > p {
+    font-size: 14px;
+  }
+
+  .maintenanceCard .whatsappButton {
+    padding: 12px 14px;
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .maintenanceCard .whatsappButton .anticon {
+    font-size: 18px;
+  }
+}

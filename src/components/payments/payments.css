@@ -1,0 +1,75 @@
+.payments {
+  width: 100%;
+  padding: 35px 20px;
+  background-color: var(--main-blue);
+  color: white;
+}
+
+.payments-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+}
+
+.payments-heading h2 {
+  margin: 0 0 8px;
+  font-size: 25px;
+  color: white;
+}
+
+.payments-heading p {
+  margin: 0;
+  font-size: 15px;
+  color: white;
+}
+
+.payments-methods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.payment-method {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 90px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pix-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .payments {
+    padding: 45px 40px;
+  }
+
+  .payments-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .payments-heading h2 {
+    font-size: 30px;
+  }
+
+  .payments-methods {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+}

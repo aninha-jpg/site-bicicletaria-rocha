@@ -1,0 +1,61 @@
+.cta {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  margin: 50px 0;
+  background-color: var(--background);
+}
+
+.cta-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+  display: block;
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background: linear-gradient(
+    90deg,
+    rgba(1, 4, 64, 0.85),
+    rgba(1, 4, 64, 0.25)
+  );
+}
+
+.cta-overlay h2 {
+  max-width: 650px;
+  margin: 0;
+  color: white;
+  font-size: 27px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+  .cta {
+    height: 340px;
+    margin: 65px 0;
+  }
+
+  .cta-image {
+    object-position: center 10%;
+  }
+
+  .cta-overlay {
+    justify-content: flex-start;
+    padding: 60px;
+  }
+
+  .cta-overlay h2 {
+    font-size: 38px;
+    text-align: left;
+  }
+}

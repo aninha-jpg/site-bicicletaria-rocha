@@ -1,6 +1,6 @@
 import WhatsAppButton from "../whatsAppButton/whatsAppButton";
 import "./header.css";
-import bannerFull from "../../assets/fachada-lado.jpg";
+import bannerFull from "../../assets/bike.jpg";
 import { InstagramOutlined } from "@ant-design/icons";
 
 function Header() {

@@ -1,0 +1,88 @@
+.accessoriesSection {
+  padding: 5px 10px;
+  margin-bottom: 40px;
+}
+
+.accessoriesSection > h2 {
+  margin: 0 0 20px;
+  text-align: center;
+  color: var(--main-blue);
+  font-size: 28px;
+}
+
+.accessoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.accessoryCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.accessoryCard img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+}
+
+.accessoryCard h3 {
+  margin: 0;
+  color: var(--main-blue);
+  text-align: center;
+  font-size: 16px;
+}
+
+.accessoryCard .whatsappButton {
+  width: 100%;
+  justify-content: center;
+  padding: 8px 10px;
+  font-size: 12px;
+  gap: 5px;
+}
+
+.accessoryCard .whatsappButton .anticon {
+  font-size: 14px;
+}
+
+@media (min-width: 880px) {
+  .accessoriesSection > h2 {
+    font-size: 36px;
+  }
+
+  .accessoriesGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .accessoryCard {
+    padding: 20px;
+  }
+
+  .accessoryCard img {
+    height: 200px;
+  }
+
+  .accessoryCard h3 {
+    font-size: 20px;
+  }
+
+  .accessoryCard .whatsappButton {
+    padding: 12px 16px;
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .accessoryCard .whatsappButton .anticon {
+    font-size: 18px;
+  }
+}
