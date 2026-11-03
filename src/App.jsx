@@ -12,12 +12,16 @@ import CallToAction from "./components/callToAction/callToAction";
 import Payments from "./components/payments/payments";
 import CTA from "./components/cta/cta";
 import Linktree from "./components/linktree/linktree";
+import NotFound from "./components/notFound/notFound";
 
 function App() {
   const path = window.location.pathname;
 
   if (path === "/links") {
     return <Linktree />;
+  }
+  if (path !== "/") {
+    return <NotFound />;
   }
 
   return (
