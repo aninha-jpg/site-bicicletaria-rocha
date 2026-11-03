@@ -5,7 +5,7 @@ import { InstagramOutlined } from "@ant-design/icons";
 
 function Header() {
   return (
-    <header className="headerSection">
+    <header className="headerSection" id="home">
       <div className="bikePlataform">
           <img
             src={bannerFull}

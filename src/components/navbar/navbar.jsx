@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 
@@ -9,9 +9,40 @@ import "../styles/styles.css";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
+  const [navbarVisible, setNavbarVisible] = useState(true);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 10) {
+        setNavbarVisible(true);
+      } else if (currentScrollY > lastScrollY + 5) {
+        setNavbarVisible(false);
+      } else if (currentScrollY < lastScrollY - 5) {
+        setNavbarVisible(true);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className="Navcontainer">
+    <nav
+      className={`Navcontainer ${
+        navbarVisible ? "navbar-visible" : "navbar-hidden"
+      }`}
+    >
       <div className="navBarDesktop">
         <div className="logo">
           <a href="#home">
@@ -24,14 +55,17 @@ function Navbar() {
           <a href="#products">Produtos</a>
           <a href="#about">Sobre</a>
           <a href="#contact">Contato</a>
-          
-          <WhatsAppButton texto="  WhatsApp"/>
+          <WhatsAppButton texto="WhatsApp" />
         </div>
       </div>
 
       <div className="navBarMobile">
         <a href="#home" className="logo">
-          <img className="heroImage" src={Logo} alt="Logo Bicicletaria Rocha" />
+          <img
+            className="heroImage"
+            src={Logo}
+            alt="Logo Bicicletaria Rocha"
+          />
         </a>
 
         <Button

@@ -21,3 +21,7 @@ body {
   color: #333;
   background-color: var(--blue-about);
 }
+
+section[id] {
+  scroll-margin-top: 80px;
+}
