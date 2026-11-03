@@ -156,15 +156,13 @@
         box-shadow: 0 8px 22px rgba(2, 8, 115, 0.1);
     }
 }
-
-@media (prefers-reduced-motion: reduce) {
-    .bikeCard,
-    .bikeCard .bikeImageClickable {
-        transition: none;
+@media (max-width: 380px) {
+    .bikesSection {
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
-    .bikeCard:hover,
-    .bikeCard .bikeImageClickable:hover {
-        transform: none;
+    .bikeCard {
+        padding: 12px 6px;
     }
 }
