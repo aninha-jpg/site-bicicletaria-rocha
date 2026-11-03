@@ -1,10 +1,16 @@
-
 .partsSection {
-  padding: 40px 20px;
+  padding: 20px;
 }
 
+.partsSection p{
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+
 .partsSection > h2 {
-  margin: 0 0 30px;
+  margin: 0 0 10px;
   text-align: center;
   color: var(--main-blue);
   font-size: 36px;

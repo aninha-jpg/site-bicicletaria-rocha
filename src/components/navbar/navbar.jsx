@@ -42,7 +42,7 @@ function Navbar() {
         />
 
         <Drawer
-          title="Menu"
+          title="Bicicletaria Rocha"
           placement="right"
           open={open}
           onClose={() => setOpen(false)}

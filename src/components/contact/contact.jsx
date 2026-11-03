@@ -8,7 +8,7 @@ import { InstagramOutlined } from "@ant-design/icons";
 function Contact() {
     return (
         <section>
-            <div className="contactHeader">
+            <div className="contactHeader" id="contact">
                 <h2>Entre em contato</h2>
 
                 <p>

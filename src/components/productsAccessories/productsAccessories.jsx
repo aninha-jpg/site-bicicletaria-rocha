@@ -24,17 +24,20 @@ function ProductAccessories() {
       <h2>Acessórios</h2>
 
       <div className="accessoriesGrid">
-        {accessories.map((accessories) => (
-          <article className="accessoryCard" key={accessories.id}>
+        {accessories.map((accessory) => (
+          <article className="accessoryCard" key={accessory.id}>
             <img
-              src={accessories.image}
-              alt={accessories.name}
+              src={accessory.image}
+              alt={accessory.name}
               loading="lazy"
             />
 
-            <h3>{accessories.name}</h3>
+            <h3>{accessory.name}</h3>
 
-            <WhatsAppButton texto="Tenho interesse" />
+            <WhatsAppButton
+              texto="Tenho interesse"
+              mensagem={`Olá! Vim pelo site da Bicicletaria Rocha e gostaria de informações sobre o acessório: ${accessory.name}.`}
+            />
           </article>
         ))}
       </div>

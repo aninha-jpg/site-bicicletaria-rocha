@@ -11,19 +11,25 @@ import MaintenanceServices from "./components/maintenanceServices/maintenanceSer
 import CallToAction from "./components/callToAction/callToAction";
 import Payments from "./components/payments/payments";
 import CTA from "./components/cta/cta";
+import Linktree from "./components/linktree/linktree";
 
 function App() {
+  const path = window.location.pathname;
+
+  if (path === "/links") {
+    return <Linktree />;
+  }
+
   return (
     <>
       <Navbar />
       <Header />
       <Products />
-
       <Bike />
       <CallToAction />
       <MaintenanceServices />
-      <CTA />
       <Parts />
+      <CTA />
       <ProductAccessories />
       <Payments />
       <About />
@@ -32,6 +38,5 @@ function App() {
     </>
   );
 }
-
 
 export default App;

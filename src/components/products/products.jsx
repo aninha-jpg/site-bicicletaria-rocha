@@ -6,7 +6,7 @@ function Products(){
         <section className="products-section" >
             <h2>O que oferecemos?</h2>
             <div className="products-container">
-                <a href="#manutencao" className="serviceLink">
+                <a href="#services" className="serviceLink">
                     <div className="product-card">
                         <SettingOutlined />
                         <h2>Manutenção</h2>

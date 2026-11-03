@@ -20,68 +20,69 @@ import BikeModal from "./bikeModal";
 import "./bike.css";
 
 const bicicletas = [
-    { id: 1, nome: "Viking", imagem: bike1 },
-    { id: 2, nome: "Viking", imagem: bike2 },
-    { id: 3, nome: "Bicicleta Crypto 29", imagem: bike3 },
-    { id: 4, nome: "Viking", imagem: bike4 },
-    { id: 5, nome: "Bicicleta Alfameq Feminina 29", imagem: bike5 },
-    { id: 6, nome: "Monark", imagem: bike6 },
-    { id: 7, nome: "Bicicleta Crypto 29", imagem: bike7 },
-    { id: 8, nome: "Bicicleta Crypto 29", imagem: bike8 },
-    { id: 9, nome: "Bicicleta Crypto 29", imagem: bike9 },
-    { id: 10, nome: "Bicicleta Infantil", imagem: bike10 },
-    { id: 11, nome: "Bicicleta BMX 20", imagem: bike11 },
-    { id: 12, nome: "Bicicleta Aro 24", imagem: bike12 },
-    { id: 13, nome: "Bicicleta Infantil Aro 16", imagem: bike13 },
-    { id: 14, nome: "Bicicleta Crypto 29", imagem: bike14 },
+  { id: 1, nome: "Viking", imagem: bike1 },
+  { id: 2, nome: "Viking", imagem: bike2 },
+  { id: 3, nome: "Bicicleta Crypto 29", imagem: bike3 },
+  { id: 4, nome: "Viking", imagem: bike4 },
+  { id: 5, nome: "Bicicleta Alfameq Feminina 29", imagem: bike5 },
+  { id: 6, nome: "Monark", imagem: bike6 },
+  { id: 7, nome: "Bicicleta Crypto 29", imagem: bike7 },
+  { id: 8, nome: "Bicicleta Crypto 29", imagem: bike8 },
+  { id: 9, nome: "Bicicleta Crypto 29", imagem: bike9 },
+  { id: 10, nome: "Bicicleta Infantil", imagem: bike10 },
+  { id: 11, nome: "Bicicleta BMX 20", imagem: bike11 },
+  { id: 12, nome: "Bicicleta Aro 24", imagem: bike12 },
+  { id: 13, nome: "Bicicleta Infantil Aro 16", imagem: bike13 },
+  { id: 14, nome: "Bicicleta Crypto 29", imagem: bike14 },
 ];
 
 function Bike() {
-    const [bicicletaSelecionada, setBicicletaSelecionada] = useState(null);
+  const [bicicletaSelecionada, setBicicletaSelecionada] = useState(null);
 
-    const fecharModal = useCallback(() => {
-        setBicicletaSelecionada(null);
-    }, []);
+  const fecharModal = useCallback(() => {
+    setBicicletaSelecionada(null);
+  }, []);
 
-    return (
-        <section className="bikesSection" id="bicicletas">
-            <h2>Bicicletas</h2>
-            <p>Mais que um meio de transporte, é liberdade e diversão!</p>
-            <div className="bikesGrid">
-                {bicicletas.map((bike) => (
-                    <article className="bikeCard" key={bike.id}>
-                        <img
-                            src={bike.imagem}
-                            alt={bike.nome}
-                            className="bikeImageClickable"
-                            role="button"
-                            tabIndex={0}
-                            aria-label={`Ampliar imagem: ${bike.nome}`}
-                            onClick={() => setBicicletaSelecionada(bike)}
-                            onKeyDown={(event) => {
-                                if (
-                                    event.key === "Enter" ||
-                                    event.key === " "
-                                ) {
-                                    event.preventDefault();
-                                    setBicicletaSelecionada(bike);
-                                }
-                            }}
-                        />
+  return (
+    <section className="bikesSection" id="products">
+      <h2>Bicicletas</h2>
+      <p>Mais que um meio de transporte, é liberdade e diversão!</p>
 
-                        <h3>{bike.nome}</h3>
-
-                        <WhatsAppButton texto="Tenho interesse" />
-                    </article>
-                ))}
-            </div>
-
-            <BikeModal
-                bicicleta={bicicletaSelecionada}
-                onClose={fecharModal}
+      <div className="bikesGrid">
+        {bicicletas.map((bike) => (
+          <article className="bikeCard" key={bike.id}>
+            <img
+              src={bike.imagem}
+              alt={bike.nome}
+              className="bikeImageClickable"
+              role="button"
+              tabIndex={0}
+              aria-label={`Ampliar imagem: ${bike.nome}`}
+              onClick={() => setBicicletaSelecionada(bike)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                  event.preventDefault();
+                  setBicicletaSelecionada(bike);
+                }
+              }}
             />
-        </section>
-    );
+
+            <h3>{bike.nome}</h3>
+
+            <WhatsAppButton
+              texto="Tenho interesse"
+              mensagem={`Olá! Vim pelo site da Bicicletaria Rocha e gostaria de informações sobre a bicicleta: ${bike.nome}.`}
+            />
+          </article>
+        ))}
+      </div>
+
+      <BikeModal
+        bicicleta={bicicletaSelecionada}
+        onClose={fecharModal}
+      />
+    </section>
+  );
 }
 
 export default Bike;

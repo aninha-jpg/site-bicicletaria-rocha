@@ -72,17 +72,36 @@
   }
 
   .navLinks a {
-    color: var(--main-blue);
+    color: var(--background);
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
   }
 
   .navLinks a:hover {
-    color: var(--strong-elements);
+    color: var(--main-blue);
   }
 
   .navLinks a.whatsappButton {
     color: white;
-}
+  }
+
+  .navLinks > a:not(.whatsappButton) {
+    position: relative;
+    text-decoration: none;
+  }
+
+  .navLinks > a:not(.whatsappButton)::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -6px;
+    background-color: var(--main-blue);
+    transition: width 0.3s ease;
+  }
+  .navLinks > a:not(.whatsappButton):hover::after {
+    width: 100%;
+  }
 }
